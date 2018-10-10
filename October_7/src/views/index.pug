@@ -1,6 +1,5 @@
-doctype html
-head
-    title= title
+include includes/header.pug
+
 body
     h1= title
     hr
@@ -10,6 +9,8 @@ body
     ul
         each product in productsDB
             li= product.name
+
+    a(href="/products") Products List
     form(action="" method="post")
         p
             input(type="text" name="name" placeholder="Product Name" required)
