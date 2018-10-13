@@ -1,0 +1,24 @@
+include ../includes/header.pug
+body
+    h1=title
+    include ../includes/navigation.pug
+    
+    form(action="" method="POST")
+        div
+            label(for="firstName") First Name
+            input#firstName(type="text", name="firstName", required)
+        div
+            label(for="midName") Middle Name
+            input#midName(type="text", name="middleName")
+        div
+            label(for="lastName") Last Name
+            input#lastName(type="text", name="lastName", required)
+        div
+            label(for="personId") ID
+            input#personId(type="text", name="id", required)
+        div
+            label(for="bDate") Birth Date
+            input#bDate(type="date", name="birthDate")
+        button(type="submit") Add Person
+
+include ../includes/footer.pug

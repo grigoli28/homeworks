@@ -1,0 +1,26 @@
+mixin carDetail(car)
+    ul
+        li
+            p= car.manufacturer
+        li
+            p= car.model
+        li
+            p= car.VIN
+        li
+            p= car.year
+
+
+
+
+
+include ../includes/header.pug
+body
+    h1= title
+    include ../includes/navigation.pug
+    //- +carDetail(car)
+    a#deleteLink(href="/cars/2") Delete Link
+
+
+
+    include ../includes/footer.pug
+    script(src="../js/ajax.js")

@@ -1,0 +1,27 @@
+include ../includes/header.pug
+body
+    h1=title
+    include ../includes/navigation.pug
+    
+    form(action="" method="POST")
+        div
+            label(for="manufacturer") Manufacturer
+            input#manufacturer(type="text", name="manufacturer")
+        div
+            label(for="model") Model
+            input#model(type="text", name="model")
+        div
+            label(for="year") Manufacturing Date
+            input#year(type="text", name="year")
+        div
+            label(for="VIN") VIN
+            input#VIN(type="text", name="VIN")
+        div
+            label(for="license") License Plate Number
+            input#license(type="text", name="licenseNumber")
+        div
+            label(for="color") Color
+            input#color(type="text", name="color")
+        button(type="submit") Add Car
+
+include ../includes/footer.pug
