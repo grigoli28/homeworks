@@ -3,12 +3,12 @@ module.exports = class Person {
         this.firstName = first;
         this.middleName = mid;
         this.lastName = last;
-        this.id = id;
+        this.ID = id;
         this.birthDate = bdate;
     }
 
     hasId(id) {
-        return this.id == id;
+        return this.ID == id;
     }
 
     // Checks for person full name
