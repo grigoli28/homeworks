@@ -1,0 +1,39 @@
+mixin personSelector(personArr)
+    label(for="owner") Owner
+        select(id="owner", name="owner")
+            option(value="null", selected) ----
+            each person in personArr
+                option(value=`${person.ID}`)= `${person.firstName}, ${person.lastName}, ${person.birthDate}`
+
+
+
+include ../includes/header.pug
+body
+    h1=title
+    include ../includes/navigation.pug
+    
+    form(action="" method="POST")
+        div
+            label(for="manufacturer") Manufacturer
+            input#manufacturer(type="text", name="manufacturer")
+        div
+            label(for="model") Model
+            input#model(type="text", name="model")
+        div
+            label(for="year") Manufacturing Date
+            input#year(type="text", name="year")
+        div
+            label(class="required", for="VIN") VIN
+            input#VIN(type="text", name="VIN" required)
+        div
+            label(class="required", for="license") License Plate Number
+            input#license(type="text", name="licenseNumber" required)
+        div
+            label(for="color") Color
+            input#color(type="text", name="color")
+        div
+            - const persons = [{firstName: "Person1", lastName: "Lastname", ID: 135, birthDate: "12/12/18"},{firstName: "Person2", lastName: "Lastname", ID: 135, birthDate: "12/12/18"},{firstName: "Person3", lastName: "Lastname", ID: 135, birthDate: "12/12/18"}];
+            +personSelector(persons)
+        button(type="submit") Add Car
+
+include ../includes/footer.pug

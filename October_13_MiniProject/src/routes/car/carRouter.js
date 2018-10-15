@@ -8,30 +8,30 @@ const CARS_DB = [];
 router.use(express.urlencoded({ extended: true }));
 
 
+router.get('/add', (req, res) => {
+    res.render('car/add', { title: "Add New Car" });
+});
+
+
 router.get('/', (req, res) => {
-    res.render('car/index', { title: "Cars Page" });
+    res.render('car/index', { title: "Available Cars", cars: CARS_DB });
 });
 
 
-router.get('/list', (req, res) => {
-    res.render('car/carList', { title: "Cars Page", cars: CARS_DB });
-});
-
-
-router.get('/1', (req, res) => {
+/* router.get('/1', (req, res) => {
     // const VIN = req.body.VIN;
     // const car = CARS_DB.find(car => car.VIN == VIN);
     res.render('car/detail', { title: "Cars Page" });
 
-});
+}); */
 
 
-router.delete('/cars/2', (req, res) => {
+/* router.delete('/cars/2', (req, res) => {
     res.send("Delete Method Working");
 
-});
+}); */
 
-router.post('/', (req, res) => {
+router.post('/add', (req, res) => {
     const car = new Car(
         req.body.manufacturer,
         req.body.model,
@@ -41,13 +41,13 @@ router.post('/', (req, res) => {
         req.body.color
     );
     CARS_DB.push(car);
-    res.render('car/index', { title: "Cars Page" });
+    res.render('car/add', { title: "Cars Page" });
 });
 
 
-router.delete('/:id(\\d)', (req, res) => {
+/* router.delete('/:id(\\d)', (req, res) => {
     res.send("DELETE METHOD WORKING")
-});
+}); */
 
 
 module.exports.router = router;
