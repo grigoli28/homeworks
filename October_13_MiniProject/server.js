@@ -3,12 +3,12 @@ const app = express();
 const path = require('path');
 
 // Persons module
-const PERSONS = require('./src/routes/person/personRouter');
+const PERSONS = require('./src/routers/person');
 const personRouter = PERSONS.router;
 const people = PERSONS.people;
 
 // Cars module
-const CARS = require('./src/routes/car/carRouter');
+const CARS = require('./src/routers/car');
 const carRouter = CARS.router;
 const vehicles = CARS.cars;
 
