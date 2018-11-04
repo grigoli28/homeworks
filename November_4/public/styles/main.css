@@ -1,0 +1,23 @@
+.image {
+  border: 1px solid black;
+}
+
+.post {
+  border: 1px solid black;
+}
+
+.album {
+  border: 1px solid black;
+}
+
+.comment {
+  border: 1px solid black;
+}
+
+.todo {
+  border: 1px solid black;
+}
+
+.user {
+  border: 1px solid black;
+}
