@@ -18,7 +18,7 @@ export default class Todos extends Component {
     return (
       <>
         <h1>Todos</h1>
-        <div>
+        <div className="container flex-box">
           {this.state.todos &&
             mapItems(this.state.todos, this.props.count, todo => (
               <Todo key={todo.id} todo={todo} />

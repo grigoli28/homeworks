@@ -18,7 +18,7 @@ export default class Albums extends Component {
     return (
       <>
         <h1>Albums</h1>
-        <div>
+        <div className="container flex-box">
           {this.state.albums &&
             mapItems(this.state.albums, this.props.count, album => (
               <Album key={album.id} album={album} />

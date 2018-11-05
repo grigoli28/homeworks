@@ -2,31 +2,32 @@ import React, { Component } from "react";
 import Data from "./Data";
 import UserInput from "./UserInput";
 
-class App extends Component {
+export default class App extends Component {
   state = {
-    dataType: "photos",
-    dataCount: 50,
-    dataUrl: `https://jsonplaceholder.typicode.com/posts`
+    dataType: "users",
+    dataCount: 10,
+    dataUrl: `https://jsonplaceholder.typicode.com/users`
   };
 
-  handleUserInput = dataType =>
+  handleUserInput = (dataType, dataCount) =>
     this.setState({
       dataType,
-      dataUrl: `https://jsonplaceholder.typicode.com/${dataType}`
+      dataUrl: `https://jsonplaceholder.typicode.com/${dataType}`,
+      dataCount
     });
 
   render() {
     return (
       <>
         <UserInput onSubmit={this.handleUserInput} />
-        <Data
-          url={this.state.dataUrl}
-          type={this.state.dataType}
-          count={this.state.dataCount}
-        />
+        <div>
+          <Data
+            url={this.state.dataUrl}
+            type={this.state.dataType}
+            count={this.state.dataCount}
+          />
+        </div>
       </>
     );
   }
 }
-
-export default App;

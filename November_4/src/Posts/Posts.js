@@ -18,7 +18,7 @@ export default class Posts extends Component {
     return (
       <>
         <h1>Posts</h1>
-        <div>
+        <div className="container flex-box">
           {this.state.posts &&
             mapItems(this.state.posts, this.props.count, post => (
               <Post key={post.id} post={post} />

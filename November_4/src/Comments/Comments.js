@@ -18,7 +18,7 @@ export default class Comments extends Component {
     return (
       <>
         <h1>Comments</h1>
-        <div>
+        <div className="container flex-box">
           {this.state.comments &&
             mapItems(this.state.comments, this.props.count, comment => (
               <Comment key={comment.id} comment={comment} />

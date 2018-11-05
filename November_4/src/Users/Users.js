@@ -21,7 +21,7 @@ export default class Users extends Component {
     return (
       <>
         <h1>Users</h1>
-        <div>
+        <div className="container flex-box">
           {this.state.users &&
             mapItems(this.state.users, this.props.count, user => (
               <User key={user.id} user={user} />

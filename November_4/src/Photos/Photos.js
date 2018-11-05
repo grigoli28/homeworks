@@ -18,7 +18,7 @@ export default class Photos extends Component {
     return (
       <>
         <h1>Photos</h1>
-        <div>
+        <div className="container flex-box">
           {this.state.photos &&
             mapItems(this.state.photos, this.props.count, photo => (
               <Photo key={photo.id} photo={photo} />

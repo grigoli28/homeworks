@@ -1,12 +1,21 @@
 import React from "react";
 
 const Details = ({ user }) => (
-  <div>
-    Personal: <div>Name : {user.name}</div>
-    <div>Username: {user.username}</div>
-    <div>Email: {user.email}</div>
-    <div>Phone: {user.phone}</div>
-    <div>Website: {user.website}</div>
+  <div className="user__details">
+    <span className="user__name">{user.name}</span>
+    <span className="user__username">( {user.username} )</span>
+    <div className="user__contact">
+      <p>
+        <i className="fas fa-envelope" />
+        {user.email}
+      </p>
+      <p>
+        <i className="fas fa-phone" />
+        {user.phone}
+      </p>
+      <i className="fas fa-link" />
+      <a href={`http://www.${user.website}`}>{user.website}</a>
+    </div>
   </div>
 );
 

@@ -5,7 +5,6 @@ import Details from "./Details";
 
 const User = ({ user }) => (
   <div className="user">
-    User
     <Details user={user} />
     <Address address={user.address} />
     <Company company={user.company} />
