@@ -4,9 +4,9 @@ import UserInput from "./UserInput";
 
 export default class App extends Component {
   state = {
-    dataType: "users",
-    dataCount: 10,
-    dataUrl: `https://jsonplaceholder.typicode.com/users`
+    dataType: "photos",
+    dataCount: 20,
+    dataUrl: `https://jsonplaceholder.typicode.com/photos`
   };
 
   handleUserInput = (dataType, dataCount) =>
