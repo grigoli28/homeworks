@@ -4,6 +4,7 @@
   --dark-blue: #032057;
   --seagreen: #54d7b7;
   --grey: #4e5e7d;
+  --beige: #fefaf7;
 }
 
 *,
@@ -181,7 +182,7 @@ img {
 }
 
 .footer-img {
-  opacity: 0.2;
+  opacity: 0.1;
 }
 
 .subscribe-msg::before {
@@ -238,7 +239,6 @@ img {
   position: relative;
   padding-bottom: 5px;
   transition: color 0.2s ease-in-out;
-
 }
 
 .footer-nav_link:hover {
