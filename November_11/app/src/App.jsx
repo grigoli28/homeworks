@@ -9,19 +9,48 @@ class App extends Component {
     super(props);
     this.state = {
       images: [
-        "https://placekitten.com/700/700",
-        "https://placekitten.com/700/700",
-        "https://placekitten.com/700/700",
-        "https://placekitten.com/700/700"
+        "https://placekitten.com/500/500",
+        "https://placekitten.com/500/501",
+        "https://placekitten.com/500/502",
+        "https://placekitten.com/500/503",
       ],
       currentSlide: 0,
-      translateValue: 0
+      translateValue: 0,
+      loop: false,
     };
   }
 
-  prevSlide = () => {};
 
-  nextSlide = () => {};
+  moveSlide = () => {
+    const translateValue = document.querySelector('.slider').clientWidth;
+    console.log(translateValue);
+  }
+
+  prevSlide = () => {
+    if (this.state.length - 1 === this.state.currentSlide) {
+      return;
+    }
+
+    this.setState(prevState => {
+      return {
+        currentSlide: prevState.currentSlide - 1,
+        translateValue: prevState.translateValue + "-500",
+      };
+    });
+  };
+
+  nextSlide = () => {
+    if (this.state.images.length - 1 === this.state.currentSlide) {
+      this.setState({ currentSlide: 0, translateValue: 0 });
+    }
+
+    this.setState(prevState => {
+      return {
+        currentSlide: prevState.currentSlide,
+        translateValue: prevState.translateValue + "-500 ",
+      };
+    });
+  };
 
   render() {
     return (
@@ -30,7 +59,7 @@ class App extends Component {
           className="slider__container"
           style={{
             transform: `translateX(${this.state.translateValue}px)`,
-            transition: "transform ease-in-out 450ms"
+            transition: "transform ease-in-out 450ms",
           }}
         >
           {this.state.images.map((image, index) => (
