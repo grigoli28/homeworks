@@ -1,5 +1,8 @@
 import React from "react";
 import Slider from "./Slider";
+import ButtonLink from "./ButtonLink";
+
+const images = [{ className: "slide", src: "/images/Pic_5.jpg" }];
 
 const Featured = () => (
   <div className="container">
@@ -18,28 +21,6 @@ const Featured = () => (
       </div>
 
       <Slider className="slider" images={images} />
-      {/* <div className="slider">
-        <SliderBtn
-          className="slider-btn slider-btn--left"
-          icon={<i className="slider-arrow fas fa-caret-left" />}
-        />
-
-        <button className="slider-btn slider-btn--left">
-          <i className="slider-arrow fas fa-caret-left" />
-        </button>
-
-        <Img className="slide" src="/images/Pic_5.jpg" />
-        <img className="slide" src="./Pic 5.jpg" alt="" />
-
-        <SliderBtn
-          className="slider-btn slider-btn--right"
-          icon={<i className="slider-arrow fas fa-caret-right" />}
-        />
-
-        <button className="slider-btn slider-btn--right">
-          <i className="slider-arrow fas fa-caret-right" />
-        </button>
-      </div> */}
 
       <div className="featured__body">
         <div className="featured__desc">
@@ -49,9 +30,12 @@ const Featured = () => (
             fugit iste. Pariatur dolore quos fugiat animi laborum amet,
             distinctio culpa facere!
           </p>
-          <a className="btn--featured btn btn--reg" href="#">
-            Case Study <i className="btn--arrow fas fa-caret-right" />
-          </a>
+          <ButtonLink
+            className="btn--featured btn btn--reg"
+            href="#"
+            text="Case Study"
+            icon={<i className="btn--arrow fas fa-caret-right" />}
+          />
         </div>
         <div className="featured__details">
           <div className="featured__detail featured__category">

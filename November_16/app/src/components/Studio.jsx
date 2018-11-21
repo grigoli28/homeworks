@@ -3,10 +3,10 @@ import ImgList from "./ImgList";
 import ButtonLink from "./ButtonLink";
 
 const images = [
-  { className: "studio__img", src: "/images/Pic_1.jpg" },
-  { className: "studio__img", src: "/images/Pic_2.jpg" },
-  { className: "studio__img", src: "/images/Pic_3.jpg" },
-  { className: "studio__img", src: "/images/Pic_4.jpg" },
+  { className: "studio__img", src: "./images/Pic_1.jpg" },
+  { className: "studio__img", src: "./images/Pic_2.jpg" },
+  { className: "studio__img", src: "./images/Pic_3.jpg" },
+  { className: "studio__img", src: "./images/Pic_4.jpg" },
 ];
 
 const Studio = () => (

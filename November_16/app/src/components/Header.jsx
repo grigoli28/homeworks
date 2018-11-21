@@ -1,12 +1,12 @@
 import React from "react";
 import Login from "./Login";
-import Nav from "./Nav";
+import HeaderNav from "./HeaderNav";
 import Logo from "./Logo";
 
 const Header = () => (
   <header className="header">
     <Logo />
-    <Nav />
+    <HeaderNav />
     <Login />
   </header>
 );

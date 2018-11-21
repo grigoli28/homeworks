@@ -8,8 +8,8 @@ const Slider = ({className, images}) => (
       className="slider-btn slider-btn--left"
       icon={<i className="slider-arrow fas fa-caret-left" />}
     />
-    {images.map((img, index)  =>  <Img className={img.className}> </Img>)}
-    <Img className="slide" src="/images/Pic_5.jpg" />
+    {images.map((img, index)  =>  <Img key={index} className={img.className}> </Img>)}
+    <Img className="slide" src="./images/Pic_5.jpg" />
 
     <SliderBtn
       className="slider-btn slider-btn--right"

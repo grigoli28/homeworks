@@ -1,6 +1,6 @@
 import React from "react";
 
-const Nav = () => (
+const HeaderNav = () => (
   <ul className="nav nav--header">
     <li className="header__nav--item">
       <a className="link nav__link" href="#">
@@ -24,4 +24,4 @@ const Nav = () => (
     </li>
   </ul>
 );
-export default Nav;
+export default HeaderNav;
