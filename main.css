@@ -1,9 +1,21 @@
 :root {
-  --green: #1abc9c;
-  --blue-tint: #e0e0e0;
-  --darker-blue: #34495e;
-  --light-grey: #e8e8e8;
   --project-count: 3;
+
+  --blue-tint: #eff8ff;
+  --lighter-blue: #aad4f5;
+  --light-blue: #63a2d8;
+  --blue: #3183c8;
+  --dark-blue: #2368a2;
+  --darker-blue: #1a4971;
+  --darkest-blue: #203d54;
+
+  --grey-tint: #f8f9fa;
+  --lighter-grey: #e1e7ec;
+  --light-grey: #cfd6de;
+  --grey: #b5c1cb;
+  --dark-grey: #8895a7;
+  --darker-grey: #5f6b7a;
+  --darkest-grey: #212934;
 }
 
 html,
@@ -16,7 +28,7 @@ html,
 }
 
 header {
-  background-color: var(--darker-blue);
+  background-color: var(--darkest-blue);
   grid-area: header;
 }
 
@@ -29,7 +41,7 @@ main {
 }
 
 footer {
-  background-color: var(--darker-blue);
+  background-color: var(--darkest-blue);
   grid-area: footer;
 }
 
@@ -44,8 +56,7 @@ ul {
 
 .container {
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 .flex-box {
@@ -97,7 +108,7 @@ ul {
 /* Navigation */
 
 nav {
-  background-color: var(--blue-tint);
+  background-color: var(--lighter-grey);
 }
 
 .main-nav {
@@ -115,15 +126,12 @@ nav {
   font-size: 1.5em;
   border-left: 0.1px solid #002342;
   transition: all 0.2s linear;
-}
-
-.main-nav__link {
-  color: var(--green);
+  color: var(--blue);
 }
 
 .main-nav__link:hover {
   color: white;
-  background-color: var(--green);
+  background-color: var(--light-blue);
 }
 
 .main-nav__link--first {
@@ -133,27 +141,28 @@ nav {
 /* Content */
 
 .main-content {
-  margin: 0 auto;
-  margin-bottom: 50px;
+  padding: 20px 0;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row-reverse wrap-reverse;
   justify-content: center;
 }
 
 .homework {
   flex-basis: 24%;
-  color: var(--green);
+  color: var(--dark-blue);
   margin: 20px 5px;
-  background-color: var(--light-grey);
-  transition: all 0.3s linear;
+  background-color: var(--lighter-grey);
+  transition: all 0.3s ease-in-out;
+  border: 2px solid var(--dark-blue);
   border-radius: 5px;
+  cursor: default;
 }
 
 .homework:hover {
-  color: #fff;
-  background-color: var(--green);
+  color: var(--darker-blue);
+  background-color: var(--lighter-blue);
   transform: scale(1.02, 1.02);
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 5px var(--darkest-blue);
 }
 
 .homework__date {
@@ -166,9 +175,13 @@ nav {
   margin: 0 10px 20px;
 }
 
+.homework__link {
+  color: var(--dark-blue);
+}
+
 .homework__link:hover {
-  color: #fff;
-  text-shadow: 0 0 3px #000;
+  color: var(--darkest-blue);
+  text-shadow: 0 0 3px var(--light-blue);
 }
 
 /* Footer */
